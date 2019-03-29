@@ -1,0 +1,16 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["cljs"]
+
+ :dependencies [[lilactown/hx "0.3.3"]]
+
+ :builds
+ {:main {:target :browser
+         :output-dir "dev-resources/public/js"
+         :asset-path "/js"
+         :modules {:main {:entries [polyfill-issue.core]}}
+         :compiler-options {:infer-externs :auto}
+         :devtools {
+                    :http-root "dev-resources/public"
+                    :http-port 8033
+                    :loader-mode :eval}}}}

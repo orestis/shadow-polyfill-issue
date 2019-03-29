@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Polyfill Test</title>
+    <!-- fixes both issues -->
+    <!--
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=Object.assign%2CSymbol"></script>
+-->
+    <!-- fixes object-assign issue -->
+<!--
+      <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=Object.assign"></script>
+-->
+  </head>
+  <body>
+    <div id="main">
+    </div>
+    <script src="/js/main.js"></script>
+    <script>
+      polyfill_issue.core.render();
+    </script>
+  </body>
+</html>
